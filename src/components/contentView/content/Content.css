@@ -1,0 +1,21 @@
+.content {
+    margin-block-start: 0px;
+}
+
+.content--title {
+    margin-block-start: 0px;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: PingFangSC-Semibold;
+}
+
+.content--paragraph {
+    margin-block-start: 0px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    color: rgba(51, 51, 51, 1);
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+}

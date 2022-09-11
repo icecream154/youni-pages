@@ -1,0 +1,14 @@
+.commentView {
+    text-align: left;
+    padding: 0px 14px;
+}
+
+.commentView--title_container {
+    margin-block-end: 1rem;
+}
+
+.commentView--title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 15px;
+    font-family: PingFangSC-Medium;
+}

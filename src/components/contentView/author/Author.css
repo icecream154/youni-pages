@@ -1,0 +1,59 @@
+.author {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.author--avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.author--desc {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.author--name {
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgba(51, 51, 51, 1);
+}
+
+.author-cert_icon {
+    width: 11px;
+    height: 11px;
+    margin: 4px 0 0 2px;
+}
+
+.author--college {
+    height: 17px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    color: rgba(153, 153, 153, 1);
+    font-size: 11.5px;
+    letter-spacing: -0.6000000238418579px;
+    font-family: PingFangSC-Regular;
+    white-space: nowrap;
+    line-height: 17px;
+    text-align: left;
+    margin-top: 1px;
+}
+
+.author--focus_button {
+    background: linear-gradient(to right, #fe2641, #ffc217);
+    color: white;
+    border-radius: 2rem;
+    padding: 4.5px 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    width: 72px;
+}

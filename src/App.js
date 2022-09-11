@@ -1,12 +1,18 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import './App.css';
+import React from 'react';
+import Navbar from './components/navbar/Navbar';
+import ImageView from './components/imageView/ImageView';
+import ContentView from './components/contentView/ContentView';
+import CommentView from './components/commentView/CommentView';
+import 'antd/dist/antd.css'
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
+      <ImageView />
+      <ContentView />
+      <CommentView />
     </div>
   );
 }

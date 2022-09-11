@@ -1,0 +1,11 @@
+.at--name {
+    color: rgba(17, 52, 100, 1);
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.at {
+    margin-block-end: 1rem;
+}
