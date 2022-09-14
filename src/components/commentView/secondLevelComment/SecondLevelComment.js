@@ -8,7 +8,7 @@ export default function SecondLevelComment(props) {
 
     return (
         <div className="secondLevelComment">
-            <img className="secondLevelComment--avatar" src={secondLevelComment["author_logo"]} />
+            <img className="secondLevelComment--avatar" src={secondLevelComment["author_logo"]} alt="author-logo" />
             <div className="secondLevelComment--info_container">
                 <div className="secondLevelComment--author_name_container">
                     <span className="secondLevelComment--author_name">{secondLevelComment["author_name"]}</span>
@@ -20,7 +20,7 @@ export default function SecondLevelComment(props) {
                     </div>
                     <div className="secondLevelComment--like_container">
                         <span className="secondLevelComment--like_count">{secondLevelComment["total_like"]}</span>
-                        <img className="secondLevelComment--like_icon" src={likeIcon}></img>
+                        <img className="secondLevelComment--like_icon" src={likeIcon} alt="" />
                     </div>
                 </div>
             </div>

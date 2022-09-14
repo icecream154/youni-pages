@@ -18,7 +18,7 @@ export default function Comment(props) {
     return (
         <div className="comment">
             <div className="comment--first_level_container">
-                <img className="comment--avatar" src={comment["author_logo"]} alt="avatar"/>
+                <img className="comment--avatar" src={comment["author_logo"]} alt=""/>
                 <div className="comment--info_container">
                     <div className="comment--author_name_container">
                         <span className="comment--author_name">{comment["author_name"]}</span>
@@ -30,7 +30,7 @@ export default function Comment(props) {
                         </div>
                         <div className="comment--like_container">
                             <span className="comment--like_count">{comment["total_like"]}</span>
-                            <img className="comment--like_icon" src={likeIcon}></img>
+                            <img className="comment--like_icon" src={likeIcon} alt=""></img>
                         </div>
                     </div>
                 </div>

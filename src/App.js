@@ -11,16 +11,17 @@ import {
 function App(props) {
 
   return (
-    <Router pathname="/">
+    <Router pathname="/" basename='/'>
       <Routes>
-        <Route path="/:id" element={<ContentPage />} ></Route>
+        <Route path="/content/:id" element={<ContentPage />} ></Route>
       </Routes>
     </Router>
   );
 }
 
-// comment: 12392
-// location:
-// ats: 
+// no labels, no ats, no location, no comments: 8011
+// comment: 801
+// location: 801
+// ats: 801
 
 export default App;

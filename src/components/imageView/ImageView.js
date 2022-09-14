@@ -16,7 +16,7 @@ export default function ImageView(props) {
     const imgList = pictures.map((src, idx) => {
       return (
         <div key={idx} className="imageView--container">
-          <img className="imageView--img" key={idx} src={src}></img>
+          <img className="imageView--img" key={idx} src={src} alt=""></img>
         </div>
       )
     })

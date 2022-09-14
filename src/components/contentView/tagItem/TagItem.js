@@ -31,6 +31,7 @@ export default function TagItem(props) {
                     className="tagItem--icon"
                     style={heightStyle}
                     src={tagUrl}
+                    alt=""
                 />
             </div>
             <span className="tagItem-text">{props.tagText}</span>

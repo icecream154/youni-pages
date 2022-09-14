@@ -8,9 +8,9 @@ export default function Navbar() {
 
     return (
         <header className="navbar">
-            <img className="navbar--logo" src={logoUrl} />
+            <img className="navbar--logo" src={logoUrl} alt="youni-logo" />
             <div className="navbar--desc">
-                <img className="navbar--desc_app_name" src={descAppNameUrl}></img>
+                <img className="navbar--desc_app_name" src={descAppNameUrl} alt="youni-desc"></img>
                 <span className="navbar--desc_text">大学生文艺潮流社区</span>
             </div>
             <div className="navbar--app_open_button"><span>打开App</span></div>

@@ -11,7 +11,7 @@ export default function Author(props) {
             <div className="author--desc">
                 <div className="author--name_container">
                     <span className="author--name">{props.name}</span>
-                    {props.cert && <img className="author-cert_icon" src={certIcon}></img>}
+                    {props.cert && <img className="author-cert_icon" src={certIcon} alt=""></img>}
                 </div>
                 <div className="author--college_container">
                     <span className="author--college">{props.college}</span>
