@@ -6,7 +6,72 @@ import Author from "./author/Author";
 import Content from "./content/Content";
 import './ContentView.css'
 
-export default function ContentView() {
+export default function ContentView(props) {
+
+    console.log(props.content);
+    let content = props.content;
+
+    function getAuthorAvatar() {
+        if (content) return content["author_logo"];
+        return "";
+    }
+
+    function getAuthorName() {
+        if (content) return content["author_name"];
+        return "";
+    }
+
+    function getAuthorCollege() {
+        if (content) return content["college_name"];
+        return "";
+    }
+
+    function getAuthorName() {
+        if (content) return content["author_name"];
+        return "";
+    }
+
+    function getAuthorCert() {
+        if (content) return content["author_cert"] === 1;
+        return false;
+    }
+
+    function getContentTitle() {
+        if (content) return content["title"];
+        return "";
+    }
+
+    function getContentParagraphs() {
+        if (content) {
+            let rawContentText = content["content"];
+            return rawContentText.split("\n");
+        }
+        return [];
+    }
+
+    function getContentLabels() {
+        if (content) {
+            let labelObjList = content["labels"];
+            return labelObjList.map((labelObj, idx) => labelObj["label_name"]);
+        }
+        return [];
+    }
+
+    function getContentPublishTime() {
+        if (content) return content["created_at"];
+        return "";
+    }
+
+    function getContentPositionValid() {
+        if (content) return content["position_valid"] !== 0;
+        return false;
+    }
+
+    function getContentPositionDetail() {
+        if (content) return content["position_detail"];
+        return "";
+    }
+    
 
     const authorAvatar = 'https://xinlikj.oss-cn-shanghai.aliyuncs.com/MTYzMzAxMzczNTE1XzBfMA==.png';
     const authorName = '澳洲袋鼠';
@@ -28,11 +93,11 @@ export default function ContentView() {
 
     return (
         <main className="contentView">
-            <Author avatar={authorAvatar} name={authorName} college={authorCollege} cert={authorCert} />
-            <Content title={contentTitle} paragraphs={contentParagraphs} />
+            <Author avatar={getAuthorAvatar()} name={getAuthorName()} college={getAuthorCollege()} cert={getAuthorCert()} />
+            <Content title={getContentTitle()} paragraphs={getContentParagraphs()} />
             <At atList={contentAts} />
-            <Label labelList={contentLabels}/>
-            <PublishInfo publishTime={contentPublishTime} publishCity={contentPublishCity} publishLocationDetail={contentPublishLocationDetail}/>
+            <Label labelList={getContentLabels()}/>
+            <PublishInfo publishTime={getContentPublishTime()} positionValid={getContentPositionValid()} positionDetail={getContentPositionDetail()}/>
         </main>
     )
 }
