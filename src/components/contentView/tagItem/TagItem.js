@@ -1,23 +1,22 @@
 import React from "react";
+import label from "../../../assets/tag@3x.png";
+import location from "../../../assets/location@3x.png";
 import './TagItem.css';
 
 export default function TagItem(props) {
 
-    const labelUrl = 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngab363745bfb24c2e18253896296d72134802aae41cc30f078cb6c7715bd06af0';
-    const locationUrl = 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng81a36c4a882e6294eebe53ae36adcd9177aa1056adb8f8eca412e43131c03eb6';
-
     let heightStyle = {
-        'width': '12px',
-        'height': '12px',
+        'width': '13px',
+        'height': '13px',
         'marginTop': '-5px',
-        'marginLeft': '3.5px'
+        'marginLeft': '3px'
     };
 
     let tagUrl = '';
     if (props.tagType === 'label') {
-        tagUrl = labelUrl;
+        tagUrl = label;
     } else if (props.tagType === 'location') {
-        tagUrl = locationUrl;
+        tagUrl = location;
         heightStyle["width"] = '15px';
         heightStyle["height"] = '15px';
         heightStyle["marginTop"] = '-8px';

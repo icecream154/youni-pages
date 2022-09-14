@@ -1,9 +1,8 @@
 import React from "react";
+import certIcon from "../../../assets/schoolid@3x.png";
 import './Author.css';
 
 export default function Author(props) {
-
-    const certIcon = 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng97ac5a4fb83735a815595253398c3b55de6eaab44c1487e839c7df9981b949c2';
 
     return (
         <header className="author">

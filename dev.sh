@@ -5,24 +5,24 @@ echo "zip done"
 
 expect -c "
 set timeout -1
-spawn scp build.zip root@124.71.108.172:/usr/local/tomcat/apache-tomcat-10.0.11/webapps
+spawn scp build.zip root@120.55.170.127:~
 expect \"*password*\"
-send \"hyftp154FUDAN\n\"
+send \"fduch073754youni@ant\n\"
 expect eof"
 
 expect -c "
 set timeout -1
-spawn ssh root@124.71.108.172 \"rm -rf /usr/local/tomcat/apache-tomcat-10.0.11/webapps/build\n\"
+spawn ssh root@120.55.170.127 \"rm -rf ~/build\n\"
 expect \"*password*\"
-send \"hyftp154FUDAN\n\"
+send \"fduch073754youni@ant\n\"
 expect eof
 "
 
 expect -c "
 set timeout -1
-spawn ssh root@124.71.108.172 \"cd /usr/local/tomcat/apache-tomcat-10.0.11/webapps\n unzip build.zip\n\"
+spawn ssh root@120.55.170.127 \"cd ~\n unzip build.zip\n\"
 expect \"*password*\"
-send \"hyftp154FUDAN\n\"
+send \"fduch073754youni@ant\n\"
 expect eof
 "
 
