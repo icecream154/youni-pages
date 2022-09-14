@@ -3,13 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Router, Route } from 'react-router';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <Router>
-  //   <Route path="/" component={App}></Route>
-  // </Router>
   <App />
 );
 

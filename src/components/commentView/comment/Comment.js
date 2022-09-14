@@ -18,7 +18,7 @@ export default function Comment(props) {
     return (
         <div className="comment">
             <div className="comment--first_level_container">
-                <img className="comment--avatar" src={comment["author_logo"]} />
+                <img className="comment--avatar" src={comment["author_logo"]} alt="avatar"/>
                 <div className="comment--info_container">
                     <div className="comment--author_name_container">
                         <span className="comment--author_name">{comment["author_name"]}</span>
