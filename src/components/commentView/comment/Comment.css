@@ -15,16 +15,22 @@
     margin-bottom: 1rem;
 }
 
-.comment--avatar {
+.comment--avatar_container {
     width: 45px;
+    min-width: 45px;
     height: 45px;
+}
+
+.comment--avatar {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     align-items: center;
     overflow: hidden;
-    margin-right: 14px;
 }
 
 .comment--info_container {
+    margin-left: 14px;
     display: flex;
     flex-direction: column;
     width: 100%;

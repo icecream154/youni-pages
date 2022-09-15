@@ -5,7 +5,7 @@ import './Comment.css';
 export default function Comment(props) {
 
     const likeIcon = "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng07e890947da9b6dc9d7be7b10b8ad56e0475689d482c248344e9d297b4c84c32";
-    
+
     const comment = props.comment;
     let secondLevelCommentList = comment["second_level_comment"];
     if (secondLevelCommentList.length > 3) {
@@ -18,7 +18,9 @@ export default function Comment(props) {
     return (
         <div className="comment">
             <div className="comment--first_level_container">
-                <img className="comment--avatar" src={comment["author_logo"]} alt=""/>
+                <div className="comment--avatar_container">
+                    <img className="comment--avatar" src={comment["author_logo"]} alt="" />
+                </div>
                 <div className="comment--info_container">
                     <div className="comment--author_name_container">
                         <span className="comment--author_name">{comment["author_name"]}</span>
