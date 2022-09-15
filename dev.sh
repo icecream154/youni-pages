@@ -7,14 +7,14 @@ expect -c "
 set timeout -1
 spawn scp build.zip root@120.55.170.127:~
 expect \"*password*\"
-send \"fduch073754youni@ant\n\"
+send \"a4d14B835d7116Fa\n\"
 expect eof"
 
 expect -c "
 set timeout -1
 spawn ssh root@120.55.170.127 \"rm -rf ~/build\n\"
 expect \"*password*\"
-send \"fduch073754youni@ant\n\"
+send \"a4d14B835d7116Fa\n\"
 expect eof
 "
 
@@ -22,7 +22,7 @@ expect -c "
 set timeout -1
 spawn ssh root@120.55.170.127 \"cd ~\n unzip build.zip\n\"
 expect \"*password*\"
-send \"fduch073754youni@ant\n\"
+send \"a4d14B835d7116Fa\n\"
 expect eof
 "
 
