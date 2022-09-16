@@ -14,8 +14,21 @@ export default function Comment(props) {
         return <SecondLevelComment key={idx} secondLevelComment={secondLevelComment} />
     })
 
+    const shadowStyle = {
+        'boxShadow': '0px 2.98256px 7.4564px -5.5px rgba(0, 0, 0, 0.1)'
+    };
+    const noneShadowStyle = {
+        'boxShadow': 'none'
+    };
+
+    function getShawdowStyle() {
+        console.log(props.last);
+        if (props.last) return noneShadowStyle;
+        return shadowStyle;
+    }
+
     return (
-        <div className="comment">
+        <div className="comment" style={getShawdowStyle()}>
             <div className="comment--first_level_container">
                 <div className="comment--avatar_container">
                     <img className="comment--avatar" src={comment["author_logo"]} alt="" />

@@ -20,6 +20,7 @@
 .navbar--desc_app_name {
     width: 36px;
     height: 13px;
+    margin-bottom: 3px;
 }
 
 .navbar--desc_text {
@@ -27,13 +28,12 @@
     display: inline-block;
     overflow-wrap: break-word;
     color: rgba(51, 51, 51, 1);
-    font-size: 12px;
+    font-size: 13.5px;
     letter-spacing: -0.6000000238418579px;
     font-family: PingFangSC-Regular;
     white-space: nowrap;
     line-height: 17px;
     text-align: left;
-    margin-top: 1px;
 }
 
 .navbar--app_open_button {

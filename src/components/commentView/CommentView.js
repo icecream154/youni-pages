@@ -13,7 +13,7 @@ export default function CommentView(props) {
     }
 
     const ats = commentList.map((comment, idx) => {
-        return <Comment key={idx} comment={comment} />
+        return <Comment key={idx} comment={comment} last={idx === commentList.length - 1}/>
     })
 
     function getCommentView() {

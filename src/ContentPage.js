@@ -59,6 +59,7 @@ function ContentPage(props) {
             <ImageView  pictures={getContentPictures()}/>
             <ContentView content={getContent()}/>
             <CommentView comment={getComment()} />
+            <div className="contentPage--blank"></div>
         </div>
     );
 }

@@ -6,10 +6,8 @@ import './TagItem.css';
 export default function TagItem(props) {
 
     let heightStyle = {
-        'width': '13px',
-        'height': '13px',
-        'marginTop': '-5px',
-        'marginLeft': '3px'
+        'marginTop': '-3.4px',
+        'marginLeft': '3.05px'
     };
 
     let tagUrl = '';
@@ -17,10 +15,8 @@ export default function TagItem(props) {
         tagUrl = label;
     } else if (props.tagType === 'location') {
         tagUrl = location;
-        heightStyle["width"] = '15px';
-        heightStyle["height"] = '15px';
-        heightStyle["marginTop"] = '-8px';
-        heightStyle["marginLeft"] = '2px';
+        heightStyle["marginTop"] = '-5.25px';
+        heightStyle["marginLeft"] = '3px';
     }
 
     return (
