@@ -1,9 +1,9 @@
 import React from "react";
+import likeIcon from "../../../assets/commentlike.png";
 import './SecondLevelComment.css';
 
 export default function SecondLevelComment(props) {
 
-    const likeIcon = "https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng07e890947da9b6dc9d7be7b10b8ad56e0475689d482c248344e9d297b4c84c32";
     const secondLevelComment = props.secondLevelComment;
 
     return (

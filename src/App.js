@@ -19,6 +19,8 @@ function App(props) {
   );
 }
 
+// 启动项目：serve -s $绝对路径
+
 // no labels, no ats, no location, no comments: 8011
 // comment: 801
 // location: 801
