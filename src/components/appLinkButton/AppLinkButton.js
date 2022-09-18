@@ -1,5 +1,5 @@
 import React from "react";
-import youni from "../../assets/YouniRadisLogo.png";
+import youni from "../../assets/YOUNIlogo@3x.png";
 import getEnv from "../../utils/env";
 import './AppLinkButton.css'
 
@@ -10,7 +10,7 @@ export default function AppLinkButton() {
             return (
                 <div className="appLinkButton">
                     <img className="appLinkButton--app_desc" src={youni} alt="" />
-                    <span className="appLinkButton--app_link_text">App 内打开</span>
+                    <span className="appLinkButton--app_link_text">App内打开</span>
                 </div>
             );
         }

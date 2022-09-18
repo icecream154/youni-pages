@@ -11,7 +11,7 @@ import {
 function App(props) {
 
   return (
-    <Router pathname="/" basename='/'>
+    <Router pathname="/" basename='/share/'>
       <Routes>
         <Route path="/content/:id" element={<ContentPage />} ></Route>
       </Routes>
@@ -25,5 +25,7 @@ function App(props) {
 // comment: 801
 // location: 801
 // ats: 801
+
+// https://share.lanhuapp.com/#/invite?sid=lxwVVKJa
 
 export default App;
