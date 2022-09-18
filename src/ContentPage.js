@@ -6,6 +6,7 @@ import CommentView from './components/commentView/CommentView';
 import { useParams } from 'react-router-dom';
 import './ContentPage.css';
 import 'antd/dist/antd.css'
+import AppLinkButton from './components/appLinkButton/AppLinkButton';
 
 const prodContentApi = "http://39.100.120.238/content/common/queryContentById?id="
 const prodCommentApi = "http://39.100.120.238/content/common/queryContentCommentList?content_id="
@@ -60,6 +61,7 @@ function ContentPage(props) {
             <ContentView content={getContent()}/>
             <CommentView comment={getComment()} />
             <div className="contentPage--blank"></div>
+            <AppLinkButton />
         </div>
     );
 }

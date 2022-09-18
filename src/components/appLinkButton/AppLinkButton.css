@@ -1,0 +1,32 @@
+.appLinkButton {
+    width: 147px;
+    height: 42px;
+    border-radius: 19.5px 19.5px 19.5px 19.5px;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 50%;
+    transform: translate3d(-50%,0,0);
+    bottom: 50PX;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5.5px;
+}
+
+.appLinkButton--app_desc {
+    width: 44%;
+    height: 32px;
+}
+
+.appLinkButton--app_link_text {
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    letter-spacing: -0.699999988079071px;
+    font-family: PingFangSC-Medium;
+    white-space: nowrap;
+    line-height: 20px;
+    text-align: left;
+}
