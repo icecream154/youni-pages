@@ -6,7 +6,7 @@ export default function Author(props) {
 
     return (
         <header className="author">
-            <img className="author--avatar" src={props.avatar} alt="Avatar"/>
+            <img className="author--avatar" src={props.avatar} alt=""/>
             <div className="author--desc">
                 <div className="author--name_container">
                     <span className="author--name">{props.name}</span>

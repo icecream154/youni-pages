@@ -56,7 +56,7 @@ function ContentPage(props) {
 
     return (
         <div className="contentPage">
-            <Navbar />
+            <Navbar contentId={id}/>
             <ImageView  pictures={getContentPictures()}/>
             <ContentView content={getContent()}/>
             <CommentView comment={getComment()} />
