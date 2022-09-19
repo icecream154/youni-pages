@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from 'antd';
 import './ImageView.css'
+import reactImageSize from 'react-image-size';
 
 export default function ImageView(props) {
 
@@ -12,6 +13,24 @@ export default function ImageView(props) {
     if (!pictures) {
       pictures = []
     }
+
+    // let containerStyle = {
+    //   'padding-bottom': '0'
+    // };
+
+    // if (pictures.length > 0) {
+    //   reactImageSize(pictures[0])
+    //   .then(({ width, height }) => showSize(width, height))
+    //   .catch((errorMessage) => console.log(errorMessage));
+    // }
+
+    // function showSize(width, height) {
+    //   console.log(width + ' : ' + height);
+    //   console.log("inner width: " + window.innerWidth);
+    //   let calHeight = height / width * window.innerWidth;
+    //   console.log(calHeight);
+    //   containerStyle['padding-bottom'] = calHeight + 'px';
+    // }
     
     const imgList = pictures.map((src, idx) => {
       return (

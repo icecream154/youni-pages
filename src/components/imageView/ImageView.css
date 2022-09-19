@@ -1,13 +1,13 @@
 .imageView--img {
     width: 100%;
-    height: 120%;
+    height: 100%;
     position: absolute;
+    object-fit: contain;
 }
 
 .imageView--container {
     width: 100%;
-    max-width: 560px;
     height: 0;
     position: relative;
-    padding-bottom: 72%;
+    padding-bottom: 100%;
 }
