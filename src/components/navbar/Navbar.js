@@ -3,7 +3,7 @@ import logo from "../../assets/logo@3x.png";
 import youni from "../../assets/YOUNI@3x.png";
 import './Navbar.css'
 
-export default function Navbar(props) {
+export default function Navbar() {
     
     // 在生产发布处关闭此跳转
     function randomContent() {

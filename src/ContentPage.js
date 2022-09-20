@@ -8,8 +8,8 @@ import './ContentPage.css';
 import 'antd/dist/antd.css'
 import AppLinkButton from './components/appLinkButton/AppLinkButton';
 
-const prodContentApi = "http://39.100.120.238/content/common/queryContentById?id="
-const prodCommentApi = "http://39.100.120.238/content/common/queryContentCommentList?content_id="
+const contentApi = "http://39.100.120.238/content/common/queryContentById?id="
+const commentApi = "http://39.100.120.238/content/common/queryContentCommentList?content_id="
 
 function ContentPage(props) {
 
@@ -40,23 +40,20 @@ function ContentPage(props) {
     let { id } = useParams();
 
     useEffect(() => {
-        fetch(prodContentApi + id)
+        fetch(contentApi + id)
         .then(res => res.json())
         .then(res => setContentData(res))
     }, []);
 
     useEffect(() => {
-        fetch(prodCommentApi + id)
+        fetch(commentApi + id)
         .then(res => res.json())
         .then(res => setCommentData(res))
     }, []);
 
-    console.log(contentData);
-    console.log(commentData);
-
     return (
         <div className="contentPage">
-            <Navbar contentId={id}/>
+            <Navbar />
             <ImageView  pictures={getContentPictures()}/>
             <ContentView content={getContent()}/>
             <CommentView comment={getComment()} />

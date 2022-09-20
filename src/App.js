@@ -7,6 +7,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import PersonalPage from './PersonalPage';
 
 function App(props) {
 
@@ -14,6 +15,7 @@ function App(props) {
     <Router pathname="/" basename='/share/'>
       <Routes>
         <Route path="/content/:id" element={<ContentPage />} ></Route>
+        <Route path="/person/:identification" element={<PersonalPage />} ></Route>
       </Routes>
     </Router>
   );
