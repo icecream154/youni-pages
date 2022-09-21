@@ -3,8 +3,6 @@ import './AvatarBlock.css'
 
 export default function AvatarBlock(props) {
 
-    console.log(props);
-
     return (
         <div className="avatarBlock">
             <img className="avatarBlock--avatar_img" alt="" src={props.avatarUrl}></img>

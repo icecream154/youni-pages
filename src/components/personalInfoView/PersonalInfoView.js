@@ -5,15 +5,15 @@ import './PersonalInfoView.css'
 
 export default function PersonalInfoView(props) {
 
+    const defaultBackUrl = "https://xinlikj.oss-cn-shanghai.aliyuncs.com/MTY0MDY4NzQ0OTg1MF8wXzA=.png";
+
     let backgroundStyle = {
-        "background": "grey"
+        "background": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + defaultBackUrl + "') center center no-repeat"
     };
 
     if (props.backUrl != "") {
         backgroundStyle["background"] = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + props.backUrl + "') center center no-repeat"
     }
-
-    console.log(backgroundStyle);
 
     return (
         <div className="personalInfoView" style={backgroundStyle}>
