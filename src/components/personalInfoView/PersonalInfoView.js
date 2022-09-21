@@ -5,8 +5,19 @@ import './PersonalInfoView.css'
 
 export default function PersonalInfoView(props) {
 
+    let backgroundStyle = {
+        "background": "white"
+    };
+
+    // if (props.backUrl != "") {
+    //     backgroundStyle["background"] = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + props.backUrl + "') center center no-repeat"
+    // }
+
+    console.log(backgroundStyle);
+
     return (
-        <main className="personalInfoView">
+        <main className="personalInfoView" style={backgroundStyle}>
+            {/* <img alt="" className="personalInfoView--background" src={props.backUrl}></img> */}
             <AvatarBlock
                 avatarUrl={props.avatarUrl}
                 focusedCount={props.focusedCount}

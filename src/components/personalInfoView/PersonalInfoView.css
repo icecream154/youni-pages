@@ -1,0 +1,10 @@
+.personalInfoView {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.personalInfoView--background {
+    width: 100%;
+}

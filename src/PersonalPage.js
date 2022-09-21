@@ -20,6 +20,11 @@ function getAvatarUrl(personalData, accId, accType, relatedId) {
     return personalData.data["logo_url"];
 }
 
+function getBackUrl(personalData, accId, accType, relatedId) {
+    if (!personalData) return "";
+    return personalData.data["back_url"];
+}
+
 function getFocusedCount(personalData, accId, accType, relatedId) {
     if (!personalData) return 0;
     return personalData.data["focused"];
@@ -87,6 +92,7 @@ function PersonalPage(props) {
         <div className="personalPage">
             <Navbar />
             <PersonalInfoView
+                backUrl={getBackUrl(personalData, accId, accType, relatedId)}
                 avatarUrl={getAvatarUrl(personalData, accId, accType, relatedId)}
                 focusedCount={getFocusedCount(personalData, accId, accType, relatedId)}
                 focusCount={getFocusCount(personalData, accId, accType, relatedId)}
