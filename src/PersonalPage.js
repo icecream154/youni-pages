@@ -162,6 +162,7 @@ function PersonalPage(props) {
                 collectContentList={collectContentList}
                 activityList={activityList}
             />
+            <div className="personalPage--blank"></div>
             <AppLinkButton />
         </div>
     );
