@@ -14,11 +14,12 @@
     justify-content: center;
     overflow: hidden;
     margin-right: auto;
+    object-fit: cover;
 }
 
 .avatarBlock--data_item {
     width: 33px;
-    margin-left: 40px;
+    margin-left: 30px;
     font-weight: bolder;
     display: inline-block;
     text-align: center;

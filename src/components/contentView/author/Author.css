@@ -14,6 +14,7 @@
     justify-content: center;
     overflow: hidden;
     margin-right: 10px;
+    object-fit: cover;
 }
 
 .author--desc {

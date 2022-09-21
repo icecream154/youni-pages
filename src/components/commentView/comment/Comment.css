@@ -27,6 +27,7 @@
     border-radius: 50%;
     align-items: center;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .comment--info_container {

@@ -1,0 +1,71 @@
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    margin-bottom: 4px;
+}
+
+.contentCard--img_container {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.contentCard--img {
+    width: 100%;
+}
+
+.contentCard--title_container {
+    margin-bottom: 2px;
+}
+
+.contentCard--title {
+    color: rgba(51, 51, 51, 1);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-family: PingFangSC-Medium;
+}
+
+.contentCard--extra_info_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentCard--author_info_container {
+    margin-right: auto;
+}
+
+.contentCard--author_avatar {
+    width: 13px;
+    height: 13px;
+    min-width: 13px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: auto;
+    object-fit: cover;
+    margin-right: 4px;
+}
+
+.contentCard--author_name {
+    color: rgba(74, 74, 74, 1);
+    font-size: 10px;
+    font-family: PingFangSC-Regular;
+}
+
+.contentCard--like_info_container {
+    margin-right: 8px;
+}
+
+.contentCard--like_icon {
+    width: 13px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.contentCard--like_count {
+
+    color: rgba(153, 153, 153, 1);
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+}

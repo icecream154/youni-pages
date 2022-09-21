@@ -1,0 +1,16 @@
+.contentFlow {
+    padding-left: 2px;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contentFlow--left_col {
+    padding-right: 4px;
+    width: 50%;
+}
+
+.contentFlow--right_col {
+    padding-left: 4px;
+    width: 50%;
+}
