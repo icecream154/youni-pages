@@ -1,0 +1,7 @@
+.flowPannelView {
+    margin-top: -1em;
+    border-radius: 15px;
+    padding: 7px;
+    background-color: white;
+    min-height: 60px;
+}

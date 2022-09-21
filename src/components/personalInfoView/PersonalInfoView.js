@@ -6,17 +6,17 @@ import './PersonalInfoView.css'
 export default function PersonalInfoView(props) {
 
     let backgroundStyle = {
-        "background": "white"
+        "background": "grey"
     };
 
-    // if (props.backUrl != "") {
-    //     backgroundStyle["background"] = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" + props.backUrl + "') center center no-repeat"
-    // }
+    if (props.backUrl != "") {
+        backgroundStyle["background"] = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + props.backUrl + "') center center no-repeat"
+    }
 
     console.log(backgroundStyle);
 
     return (
-        <main className="personalInfoView" style={backgroundStyle}>
+        <div className="personalInfoView" style={backgroundStyle}>
             {/* <img alt="" className="personalInfoView--background" src={props.backUrl}></img> */}
             <AvatarBlock
                 avatarUrl={props.avatarUrl}
@@ -33,6 +33,6 @@ export default function PersonalInfoView(props) {
                 yCode={props.yCode}
                 signature={props.signature}
             />
-        </main>
+        </div>
     )
 }

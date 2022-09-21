@@ -3,6 +3,9 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: -1;
+    padding: 8px 27px;
+    padding-bottom: 1.8em;
 }
 
 .personalInfoView--background {

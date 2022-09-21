@@ -5,6 +5,7 @@ import './PersonalPage.css';
 import 'antd/dist/antd.css'
 import AppLinkButton from './components/appLinkButton/AppLinkButton';
 import PersonalInfoView from './components/personalInfoView/PersonalInfoView';
+import FlowPannelView from './components/flowPannelView/FlowPannelView';
 
 const personalInfoApi = "http://39.100.120.238/acc/common/getInfo?"
 // const personalContentApi = "http://39.100.120.238/content/common/queryContentCommentList?"
@@ -72,7 +73,7 @@ function getSignature(personalData, accId, accType, relatedId) {
 
 function PersonalPage(props) {
 
-    let accId = 4843;
+    let accId = 850;
     let accType = 0;
     let relatedId = 0;
 
@@ -105,6 +106,7 @@ function PersonalPage(props) {
                 yCode={getYouniCode(personalData, accId, accType, relatedId)}
                 signature={getSignature(personalData, accId, accType, relatedId)}
             />
+            <FlowPannelView />
             <AppLinkButton />
         </div>
     );

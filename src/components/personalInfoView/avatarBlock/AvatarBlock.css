@@ -1,0 +1,51 @@
+.avatarBlock {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin-bottom: 0.8em;
+}
+
+.avatarBlock--avatar_img {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: auto;
+}
+
+.avatarBlock--data_item {
+    width: 33px;
+    margin-left: 40px;
+    font-weight: bolder;
+    display: inline-block;
+    text-align: center;
+}
+
+.avatarBlock--data_item_number_container {
+    height: 26px;
+}
+
+.avatarBlock--data_item_number {
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-family: PingFangSC-Medium;
+    white-space: nowrap;
+    line-height: 26px;
+}
+
+.avatarBlock--data_item_desc_container {
+    width: 36px;
+}
+
+.avatarBlock--data_item_desc {
+    overflow-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    white-space: nowrap;
+    line-height: 19px;
+}
