@@ -93,7 +93,7 @@ function getSignature(personalData, accId, accType, relatedId) {
 
 function PersonalPage(props) {
 
-    let accId = 882;
+    let accId = 112;
     let accType = 0;
     let relatedId = 0;
 
