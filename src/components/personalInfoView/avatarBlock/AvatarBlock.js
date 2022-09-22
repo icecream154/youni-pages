@@ -4,6 +4,10 @@ import './AvatarBlock.css'
 
 export default function AvatarBlock(props) {
 
+    let specMargin = {
+        "marginLeft": "6px"
+    };
+
     return (
         <div className="avatarBlock">
             <img
@@ -28,7 +32,7 @@ export default function AvatarBlock(props) {
                         <span className="avatarBlock--data_item_desc">关注</span>
                     </div>
                 </div>
-                <div className="avatarBlock--data_item">
+                <div className="avatarBlock--data_item" style={specMargin}>
                     <div className="avatarBlock--data_item_number_container">
                         <span className="avatarBlock--data_item_number">{props.influence}</span>
                     </div>

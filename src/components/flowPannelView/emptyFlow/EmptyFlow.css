@@ -12,3 +12,7 @@
     width: 40%;
     margin-bottom: 0.9em;
 }
+
+.emptyFlow--hint_text {
+    color: rgba(102, 102, 102, 1);
+}

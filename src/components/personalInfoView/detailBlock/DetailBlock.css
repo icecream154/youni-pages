@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: baseline;
     text-align: left;
-    font-size: 12px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 1);
-    font-family: PingFangSC-Medium;
+    font-family: PingFangSC-Regular;
 }
 
 .detailBlock--name_container {
@@ -14,8 +14,9 @@
 
 .detailBlock--name {
     overflow-wrap: break-word;
-    font-size: 24px;
+    font-size: 26px;
     font-family: PingFangSC-Regular;
+    font-weight: bolder;
     white-space: nowrap;
     line-height: 44px;
 }
