@@ -1,0 +1,14 @@
+.emptyFlow {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.emptyFlow--img {
+    width: 40%;
+    margin-bottom: 0.9em;
+}

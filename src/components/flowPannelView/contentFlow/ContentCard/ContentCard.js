@@ -1,5 +1,6 @@
 import React from "react";
 import likeIcon from "../../../../assets/commentlike.png";
+import defaultPersonalAvatar from "../../../../assets/defaultPersonalAvatar@3x.png";
 import { jumpToContentPage } from "../../../../utils/linkUtil";
 import './ContentCard.css';
 
@@ -17,7 +18,11 @@ export default function ContentCard(props) {
             </div>
             <div className="contentCard--extra_info_container">
                 <div className="contentCard--author_info_container">
-                    <img className="contentCard--author_avatar" alt="" src={content.author_logo}></img>
+                    <img
+                        className="contentCard--author_avatar"
+                        alt=""
+                        src={content.author_logo === "" ? defaultPersonalAvatar : content.author_logo}>
+                    </img>
                     <span className="contentCard--author_name">{content.author_name}</span>
                 </div>
                 <div className="contentCard--like_info_container">

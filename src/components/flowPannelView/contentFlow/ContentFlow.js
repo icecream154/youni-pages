@@ -4,16 +4,23 @@ import './ContentFlow.css'
 
 export default function ContentFlow(props) {
 
-    console.log(props.contentList);
+    let contentList = props.contentList;
+    let openCollection = props.openCollection;
+    if (!contentList) {
+        contentList = [];
+    }
+    if (!openCollection) {
+        openCollection = false;
+    }
 
     let leftContentList = [];
     let rightContentList = [];
 
-    for (let i = 0; i < props.contentList.length; i++) {
+    for (let i = 0; i < contentList.length; i++) {
         if (i % 2 === 0) {
-            leftContentList.push(props.contentList[i]);
+            leftContentList.push(contentList[i]);
         } else {
-            rightContentList.push(props.contentList[i]);
+            rightContentList.push(contentList[i]);
         }
     }
 

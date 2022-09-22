@@ -74,11 +74,15 @@ function getName(personalData, accId, accType, relatedId) {
 
 function getFirstCertInfo(personalData, accId, accType, relatedId) {
     if (!personalData) return "";
+    if (accType === 1) return "校园组织";
+    if (accType === 2) return "企业商家";
     return personalData["college_name"];
 }
 
 function getSecondCertInfo(personalData, accId, accType, relatedId) {
     if (!personalData) return "";
+    if (accType === 1) return personalData["college_name"];
+    if (accType === 2) return "";
     return personalData["profession"];
 }
 
@@ -164,13 +168,16 @@ function PersonalPage(props) {
     );
 }
 
-// 112,0,0 prod: MTEyIzAjMEBwcm9k
-// 89,0,0  test: ODkjMCMwQHRlc3Q=
+// 112,0,0 prod CodingBoy未公开收藏: http://share.theyouni.com:3000/share/person/MTEyIzAjMEBwcm9k
+// 89,0,0  test 鱼尾:               http://share.theyouni.com:3000/share/person/ODkjMCMwQHRlc3Q=
 
-// 1,1,1   prod: MSMxIzFAcHJvZA==
-// 23,1,91 test: MjMjMSM5MUB0ZXN0
+// 1,1,1   prod Youni活动助手: http://share.theyouni.com:3000/share/person/MSMxIzFAcHJvZA==
+// 23,1,91 test 哥大组织:      http://share.theyouni.com:3000/share/person/MjMjMSM5MUB0ZXN0
 
-// 5,2,6 test: NSMyIzZAdGVzdA==
-// 3,2,3 test: MyMyIzNAdGVzdA==
+// 5,2,6 test CIS研课:         http://share.theyouni.com:3000/share/person/NSMyIzZAdGVzdA==
+// 3,2,3 test SmartShanghai:  http://share.theyouni.com:3000/share/person/MyMyIzNAdGVzdA== 
+
+// 3,1,3    prod 厦大组织（全空测试）: http://share.theyouni.com:3000/share/person/MyMxIzNAcHJvZA==
+// 4843,0,0 prod 星仔（未认证）:      http://share.theyouni.com:3000/share/person/NDg0MyMwIzBAcHJvZA==
 
 export default PersonalPage;

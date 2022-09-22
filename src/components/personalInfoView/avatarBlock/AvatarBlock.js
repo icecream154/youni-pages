@@ -1,11 +1,16 @@
 import React from "react";
+import defaultPersonalAvatar from "../../../assets/defaultPersonalAvatar@3x.png";
 import './AvatarBlock.css'
 
 export default function AvatarBlock(props) {
 
     return (
         <div className="avatarBlock">
-            <img className="avatarBlock--avatar_img" alt="" src={props.avatarUrl}></img>
+            <img
+                className="avatarBlock--avatar_img"
+                alt=""
+                src={props.avatarUrl === "" ? defaultPersonalAvatar : props.avatarUrl}>
+            </img>
             <div className="avatarBlock--data_container">
                 <div className="avatarBlock--data_item">
                     <div className="avatarBlock--data_item_number_container">

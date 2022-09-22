@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ActivityFlow from "./activityFlow/ActivityFlow";
 import ContentFlow from "./contentFlow/ContentFlow";
+import EmptyFlow from "./emptyFlow/EmptyFlow";
 import './FlowPannelView.css'
 import TabPannel from "./tabPannel/TabPannel";
 
@@ -19,11 +20,23 @@ export default function FlowPannelView(props) {
 
     function getActualFlow() {
         if (selectedIndex === 0) {
-            return <ContentFlow openCollection={true} contentList={props.publishContentList} />
+            if (props.publishContentList && props.publishContentList.length > 0) {
+                return <ContentFlow contentList={props.publishContentList} />
+            }
+            return <EmptyFlow emptyType="publish" />
         } else if (selectedIndex === 1) {
-            return <ContentFlow openCollection={props.openCollection} contentList={props.collectContentList} />
+            if (!props.openCollection) {
+                return <EmptyFlow emptyType="closeCollect" />
+            }
+            if (props.collectContentList && props.collectContentList.length > 0) {
+                return <ContentFlow contentList={props.collectContentList} />
+            }
+            return <EmptyFlow emptyType="collect" />
         } else if (selectedIndex === 2) {
-            return <ActivityFlow activityList={props.activityList} />
+            if (props.activityList && props.activityList.length > 0) {
+                return <ActivityFlow activityList={props.activityList} />
+            }
+            return <EmptyFlow emptyType="activity" />
         }
         return <div></div>
     }

@@ -116,3 +116,5 @@ export function jumpToContentPage(contentId) {
 export function jumpToPersonalPage(accId, accType, relatedId) {
     window.location.href = "/share/person/" + encodePersonUrl(accId, accType, relatedId, getServerEnv());
 }
+
+console.log(encodePersonUrl(4843,0,0,"prod"))
