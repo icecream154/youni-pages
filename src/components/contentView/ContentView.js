@@ -11,6 +11,21 @@ export default function ContentView(props) {
     console.log(props.content);
     let content = props.content;
 
+    function getAuthorAccId() {
+        if (content) return content["acc_id"];
+        return 0;
+    }
+
+    function getAuthorAccType() {
+        if (content) return content["acc_type"];
+        return 0;
+    }
+
+    function getAuthorRelatedId() {
+        if (content) return content["related_id"];
+        return 0;
+    }
+
     function getAuthorAvatar() {
         if (content) return content["author_logo"];
         return "";
@@ -92,11 +107,26 @@ export default function ContentView(props) {
 
     return (
         <main className="contentView">
-            <Author avatar={getAuthorAvatar()} name={getAuthorName()} college={getAuthorCollege()} cert={getAuthorCert()} />
-            <Content title={getContentTitle()} paragraphs={getContentParagraphs()} />
+            <Author
+                avatar={getAuthorAvatar()}
+                name={getAuthorName()}
+                college={getAuthorCollege()}
+                cert={getAuthorCert()}
+                accId={getAuthorAccId()}
+                accType={getAuthorAccType()}
+                relatedId={getAuthorRelatedId()}
+            />
+            <Content
+                title={getContentTitle()} 
+                paragraphs={getContentParagraphs()}
+            />
             {getAtsComponent()}
             {getLabelsComponent()}
-            <PublishInfo publishTime={getContentPublishTime()} positionValid={getContentPositionValid()} positionDetail={getContentPositionDetail()}/>
+            <PublishInfo
+                publishTime={getContentPublishTime()}
+                positionValid={getContentPositionValid()}
+                positionDetail={getContentPositionDetail()}
+            />
         </main>
     )
 }

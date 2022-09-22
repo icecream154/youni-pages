@@ -14,7 +14,7 @@ function App(props) {
   return (
     <Router pathname="/" basename='/share/'>
       <Routes>
-        <Route path="/content/:id" element={<ContentPage />} ></Route>
+        <Route path="/content/:identification" element={<ContentPage />} ></Route>
         <Route path="/person/:identification" element={<PersonalPage />} ></Route>
       </Routes>
     </Router>

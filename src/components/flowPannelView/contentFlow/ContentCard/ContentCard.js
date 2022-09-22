@@ -1,5 +1,6 @@
 import React from "react";
 import likeIcon from "../../../../assets/commentlike.png";
+import { jumpToContentPage } from "../../../../utils/linkUtil";
 import './ContentCard.css';
 
 export default function ContentCard(props) {
@@ -7,7 +8,7 @@ export default function ContentCard(props) {
     const content = props.content;
 
     return (
-        <div className="contentCard">
+        <div className="contentCard" onClick={() => jumpToContentPage(content.id)}>
             <div className="contentCard--img_container">
                 <img className="contentCard--img" alt="" src={content.pictures[0]}></img>
             </div>

@@ -8,3 +8,11 @@ export default function getEnv() {
     }
     return "pc";
 }
+
+export function isIOS() {
+    return navigator.userAgent.match(/iPhone/i);
+}
+
+export function isAndroid() {
+    return navigator.userAgent.match(/Android/i);
+}

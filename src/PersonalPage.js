@@ -6,33 +6,34 @@ import 'antd/dist/antd.css'
 import AppLinkButton from './components/appLinkButton/AppLinkButton';
 import PersonalInfoView from './components/personalInfoView/PersonalInfoView';
 import FlowPannelView from './components/flowPannelView/FlowPannelView';
+import { decodePersonUrl, setServerEnv, getServerEnv, getServerBaseUrl } from './utils/linkUtil';
 
-const personalInfoApi = "http://39.100.120.238/acc/common/getInfo?";
-const personalContentApi = "http://39.100.120.238/content/common/queryContentByAuthor?";
-const personalCollectionApi = "http://39.100.120.238/content/common/queryCollectedContent?";
+const personalInfoApi = "acc/common/getInfo?";
+const personalContentApi = "content/common/queryContentByAuthor?";
+const personalCollectionApi = "content/common/queryCollectedContent?";
 const personalCollectionNotOpenCode = -401000;
-const personalActivityApi = "http://39.100.120.238/activity/common/queryActivityList?";
+const personalActivityApi = "activity/common/queryActivityList?";
 
 const defaultMaxContentSize = 8;
 const defaultMaxActivitySize = 6;
 
 function getPersonalInfoApi(accId, accType, relatedId) {
-    return personalInfoApi + "acc_id=" + accId + "&acc_type=" + accType +
+    return getServerBaseUrl(getServerEnv(), "acc") + personalInfoApi + "acc_id=" + accId + "&acc_type=" + accType +
         "&related_id=" + relatedId;
 }
 
 function getPersonalContentApi(accId, accType, relatedId) {
-    return personalContentApi + "acc_id=" + accId + "&acc_type=" + accType +
+    return getServerBaseUrl(getServerEnv(), "content") + personalContentApi + "acc_id=" + accId + "&acc_type=" + accType +
         "&related_id=" + relatedId + "&page_num=1&page_size=" + defaultMaxContentSize;
 }
 
 function getPersonalCollectionApi(accId, accType, relatedId) {
-    return personalCollectionApi + "acc_id=" + accId + "&acc_type=" + accType +
+    return getServerBaseUrl(getServerEnv(), "content") + personalCollectionApi + "acc_id=" + accId + "&acc_type=" + accType +
         "&related_id=" + relatedId + "&page_num=1&page_size=" + defaultMaxContentSize;
 }
 
 function getPersonalActivityApi(accId, accType, relatedId) {
-    return personalActivityApi + "&acc_type=" + accType +
+    return getServerBaseUrl(getServerEnv(), "activity") + personalActivityApi + "&acc_type=" + accType +
         "&related_id=" + relatedId + "&process_status=-1&page_num=1&page_size=" + defaultMaxActivitySize;
 }
 
@@ -93,10 +94,6 @@ function getSignature(personalData, accId, accType, relatedId) {
 
 function PersonalPage(props) {
 
-    let accId = 112;
-    let accType = 0;
-    let relatedId = 0;
-
     const [personalData, setPersonalData] = useState();
     const [publishContentList, setPublishContentList] = useState([]);
     const [collectContentList, setCollectContentList] = useState([]);
@@ -104,6 +101,11 @@ function PersonalPage(props) {
     const [openCollection, setOpenCollection] = useState(true);
 
     let { identification } = useParams();
+    let [success, accId, accType, relatedId, env] = decodePersonUrl(identification);
+    setServerEnv(env);
+    console.log("success: " + success + " accId: " + accId 
+        + " accType: " + accType + " relatedId: " + relatedId + " env: " + env + " env: " + env);
+    // todo: 解析错误处理
 
     useEffect(() => {
         fetch(getPersonalInfoApi(accId, accType, relatedId))
@@ -131,12 +133,6 @@ function PersonalPage(props) {
         }
 
     }, []);
-
-    // console.log(personalData);
-    // console.log(publishContentList);
-    // console.log(collectContentList);
-    // console.log(openCollection);
-    // console.log(activityList);
 
     return (
         <div className="personalPage">
@@ -167,5 +163,14 @@ function PersonalPage(props) {
         </div>
     );
 }
+
+// 112,0,0 prod: MTEyIzAjMEBwcm9k
+// 89,0,0  test: ODkjMCMwQHRlc3Q=
+
+// 1,1,1   prod: MSMxIzFAcHJvZA==
+// 23,1,91 test: MjMjMSM5MUB0ZXN0
+
+// 5,2,6 test: NSMyIzZAdGVzdA==
+// 3,2,3 test: MyMyIzNAdGVzdA==
 
 export default PersonalPage;
