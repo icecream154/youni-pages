@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from 'antd';
-import './ImageView.css'
-import reactImageSize from 'react-image-size';
+import './ImageView.css';
 
 export default function ImageView(props) {
 

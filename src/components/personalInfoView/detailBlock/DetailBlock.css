@@ -29,6 +29,11 @@
 
 .detailBlock--certification_container {
     margin-bottom: 4.5px;
+    height: 18px;
+}
+
+.detailBlock--certification_desc {
+    padding-top: 2.5px  /* 使文字与icon水平居中对齐 */
 }
 
 .detailBlock--yCode_container {
