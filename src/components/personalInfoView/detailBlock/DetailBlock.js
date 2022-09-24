@@ -25,10 +25,14 @@ export default function DetailBlock(props) {
                 <span className="detailBlock--name">{props.name}</span>
             </div>
             <div className="detailBlock--certification_container">
-                {getCertIcon()}
-                <span className="detailBlock--certification_desc">
-                    {props.firstCertInfo + (props.secondCertInfo === "" ? "" : " | ") + props.secondCertInfo}
-                </span>
+                <div className="detailBlock--certification_icon_container">
+                    {getCertIcon()}
+                </div>
+                <div className="detailBlock--certification_desc_container">
+                    <span className="detailBlock--certification_desc">
+                        {props.firstCertInfo + (props.secondCertInfo === "" ? "" : " | ") + props.secondCertInfo}
+                    </span>
+                </div>
             </div>
             <div className="detailBlock--yCode_container">
                 <span className="detailBlock--yCode">{"Ycode: " + props.yCode}</span>

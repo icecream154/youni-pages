@@ -117,4 +117,4 @@ export function jumpToPersonalPage(accId, accType, relatedId) {
     window.location.href = "/share/person/" + encodePersonUrl(accId, accType, relatedId, getServerEnv());
 }
 
-console.log(encodePersonUrl(4843,0,0,"prod"))
+console.log(encodePersonUrl(3,2,3,"prod"))

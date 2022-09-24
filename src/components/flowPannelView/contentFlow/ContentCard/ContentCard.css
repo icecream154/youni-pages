@@ -12,20 +12,22 @@
 
 .contentCard--img {
     border-radius: 4px 4px 0 0;
+    aspect-ratio: 1 / 1;
     width: 100%;
+    object-fit: cover;
 }
 
 .contentCart--img_high {
     border-radius: 4px 4px 0 0;
     width: 100%;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
 }
 
 .contentCart--img_long {
     border-radius: 4px 4px 0 0;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 

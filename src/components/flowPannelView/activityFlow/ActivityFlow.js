@@ -1,4 +1,5 @@
 import React from "react";
+import ActivityCard from "./activityCard/ActivityCard";
 import './ActivityFlow.css'
 
 export default function ActivityFlow(props) {
@@ -7,6 +8,7 @@ export default function ActivityFlow(props) {
 
     return (
         <div className="activityFlow">
+            {props.activityList.map((obj, idx) => <ActivityCard key={idx} activity={obj} />)}
         </div>
     )
 }

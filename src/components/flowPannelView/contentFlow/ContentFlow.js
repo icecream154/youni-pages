@@ -1,5 +1,5 @@
 import React from "react";
-import ContentCard from "./ContentCard/ContentCard";
+import ContentCard from "./contentCard/ContentCard";
 import './ContentFlow.css'
 
 export default function ContentFlow(props) {

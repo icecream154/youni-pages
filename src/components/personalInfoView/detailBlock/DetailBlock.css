@@ -21,19 +21,28 @@
     line-height: 44px;
 }
 
-.detailBlock--certification_cert_icon {
+.detailBlock--certification_container {
+    margin-bottom: 4.5px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.detailBlock--certification_icon_container {
     width: 18px;
     height: 18px;
     margin-right: 4px;
 }
 
-.detailBlock--certification_container {
-    margin-bottom: 4.5px;
+.detailBlock--certification_cert_icon {
+    width: 18px;
     height: 18px;
+    min-width: 18px;
 }
 
-.detailBlock--certification_desc {
-    padding-top: 2.5px  /* 使文字与icon水平居中对齐 */
+.detailBlock--certification_desc_container {
+    font-size: 13px;
+    margin-top: 1.5px;
 }
 
 .detailBlock--yCode_container {

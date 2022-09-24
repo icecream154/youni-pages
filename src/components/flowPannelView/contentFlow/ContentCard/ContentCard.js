@@ -19,9 +19,9 @@ export default function ContentCard(props) {
 
     function setClassName(width, height) {
       console.log(width + ' : ' + height);
-      if (width / height < 9 / 16) {
+      if (width / height < 3 / 4) {
         setImgClassName("contentCart--img_high");
-      } else if (width / height > 16 / 9) {
+      } else if (width / height > 4 / 3) {
         setImgClassName("contentCart--img_long");
       }
     }

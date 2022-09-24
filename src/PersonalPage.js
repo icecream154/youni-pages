@@ -176,6 +176,7 @@ function PersonalPage(props) {
 
 // 5,2,6 test CIS研课:         http://share.theyouni.com:3000/share/person/NSMyIzZAdGVzdA==
 // 3,2,3 test SmartShanghai:  http://share.theyouni.com:3000/share/person/MyMyIzNAdGVzdA== 
+// 3,2,3 prod SmartShanghai:  http://share.theyouni.com:3000/share/person/MyMyIzNAcHJvZA==
 
 // 3,1,3    prod 厦大组织（全空测试）: http://share.theyouni.com:3000/share/person/MyMxIzNAcHJvZA==
 // 4843,0,0 prod 星仔（未认证）:      http://share.theyouni.com:3000/share/person/NDg0MyMwIzBAcHJvZA==
