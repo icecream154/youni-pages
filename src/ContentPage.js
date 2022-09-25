@@ -8,6 +8,7 @@ import './ContentPage.css';
 import 'antd/dist/antd.css'
 import AppLinkButton from './components/appLinkButton/AppLinkButton';
 import { getServerBaseUrl, getServerEnv, setServerEnv, encodeContentUrl, decodeContentUrl } from './utils/linkUtil';
+import { openApp } from './utils/openApp';
 
 const contentApi = "content/common/queryContentById?id="
 const commentApi = "content/common/queryContentCommentList?content_id="
@@ -58,14 +59,16 @@ function ContentPage(props) {
         .then(res => setCommentData(res))
     }, []);
 
+    let clickFunc = () => openApp("content", {"content_id": id});
+
     return (
         <div className="contentPage">
-            <Navbar />
+            <Navbar clickFunc={clickFunc}/>
             <ImageView  pictures={getContentPictures()}/>
             <ContentView content={getContent()}/>
             <CommentView comment={getComment()} />
             <div className="contentPage--blank"></div>
-            <AppLinkButton />
+            <AppLinkButton clickFunc={clickFunc} />
         </div>
     );
 }

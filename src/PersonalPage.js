@@ -7,6 +7,7 @@ import AppLinkButton from './components/appLinkButton/AppLinkButton';
 import PersonalInfoView from './components/personalInfoView/PersonalInfoView';
 import FlowPannelView from './components/flowPannelView/FlowPannelView';
 import { decodePersonUrl, setServerEnv, getServerEnv, getServerBaseUrl } from './utils/linkUtil';
+import { openApp } from './utils/openApp';
 
 const personalInfoApi = "acc/common/getInfo?";
 const personalContentApi = "content/common/queryContentByAuthor?";
@@ -138,9 +139,11 @@ function PersonalPage(props) {
 
     }, []);
 
+    let clickFunc = () => openApp("person", {"acc_id": accId, "acc_type": accType, "related_id": relatedId});
+
     return (
         <div className="personalPage">
-            <Navbar />
+            <Navbar clickFunc={clickFunc} />
             <PersonalInfoView
                 backUrl={getBackUrl(personalData, accId, accType, relatedId)}
                 avatarUrl={getAvatarUrl(personalData, accId, accType, relatedId)}
@@ -163,7 +166,7 @@ function PersonalPage(props) {
                 activityList={activityList}
             />
             <div className="personalPage--blank"></div>
-            <AppLinkButton />
+            <AppLinkButton clickFunc={clickFunc} />
         </div>
     );
 }

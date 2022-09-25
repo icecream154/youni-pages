@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import likeIcon from "../../../../assets/commentlike.png";
 import defaultPersonalAvatar from "../../../../assets/defaultPersonalAvatar@3x.png";
 import { jumpToContentPage } from "../../../../utils/linkUtil";
@@ -10,20 +10,25 @@ export default function ContentCard(props) {
     const content = props.content;
 
     const pictures = content.pictures;
-    const [imgClassName, setImgClassName] = useState("contentCard--img");
+    const [imgClassName, setImgClassName] = useState(getClassName(content["display_ratio"]));
     if (pictures.length > 0) {
-      reactImageSize(pictures[0])
-      .then(({ width, height }) => setClassName(width, height))
-      .catch((errorMessage) => console.log(errorMessage));
+        if (!content["display_ratio"] || content["display_ratio"] == 0) {
+            reactImageSize(pictures[0])
+                .then(({ width, height }) => setImgClassName(getClassName(height / width)))
+                .catch((errorMessage) => console.log(errorMessage));
+        }
     }
 
-    function setClassName(width, height) {
-      console.log(width + ' : ' + height);
-      if (width / height < 3 / 4) {
-        setImgClassName("contentCart--img_high");
-      } else if (width / height > 4 / 3) {
-        setImgClassName("contentCart--img_long");
-      }
+    function getClassName(ratio) {
+        if (!ratio || ratio === 0) {
+            return "contentCard--img"
+        }
+        if (ratio < 3.0 / 4 + 0.01) {
+            return "contentCart--img_long";
+        } else if (ratio > 4 / 3 - 0.01) {
+            return "contentCart--img_high";
+        }
+        return "contentCard--img"
     }
 
     return (
