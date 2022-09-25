@@ -1,5 +1,6 @@
 import React from "react";
 import likeIcon from "../../../assets/commentlike.png";
+import defaultPersonalAvatar from "../../../assets/defaultPersonalAvatar@3x.png";
 import './SecondLevelComment.css';
 
 export default function SecondLevelComment(props) {
@@ -8,7 +9,10 @@ export default function SecondLevelComment(props) {
 
     return (
         <div className="secondLevelComment">
-            <img className="secondLevelComment--avatar" src={secondLevelComment["author_logo"]} alt="author-logo" />
+            <img
+                className="secondLevelComment--avatar"
+                src={secondLevelComment["author_logo"] === "" ? defaultPersonalAvatar : secondLevelComment["author_logo"]}
+                alt="" />
             <div className="secondLevelComment--info_container">
                 <div className="secondLevelComment--author_name_container">
                     <span className="secondLevelComment--author_name">{secondLevelComment["author_name"]}</span>

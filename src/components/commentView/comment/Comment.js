@@ -1,6 +1,7 @@
 import React from "react";
 import SecondLevelComment from "../secondLevelComment/SecondLevelComment";
 import likeIcon from "../../../assets/commentlike.png";
+import defaultPersonalAvatar from "../../../assets/defaultPersonalAvatar@3x.png";
 import './Comment.css';
 
 export default function Comment(props) {
@@ -31,7 +32,9 @@ export default function Comment(props) {
         <div className="comment" style={getShawdowStyle()}>
             <div className="comment--first_level_container">
                 <div className="comment--avatar_container">
-                    <img className="comment--avatar" src={comment["author_logo"]} alt="" />
+                    <img className="comment--avatar"
+                        src={comment["author_logo"] === "" ? defaultPersonalAvatar : comment["author_logo"]}
+                        alt="" />
                 </div>
                 <div className="comment--info_container">
                     <div className="comment--author_name_container">
