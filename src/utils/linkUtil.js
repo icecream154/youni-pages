@@ -118,3 +118,4 @@ export function jumpToPersonalPage(accId, accType, relatedId) {
 }
 
 console.log(encodePersonUrl(3,2,3,"prod"))
+console.log(encodeContentUrl(18,"prod"))

@@ -5,6 +5,7 @@ import PublishInfo from "./publishInfo/PublishInfo";
 import Author from "./author/Author";
 import Content from "./content/Content";
 import './ContentView.css'
+import Liker from "./liker/Liker";
 
 export default function ContentView(props) {
 
@@ -90,8 +91,15 @@ export default function ContentView(props) {
         return "";
     }
 
-    const contentLikerAvatarList = ['https://xinlikj.oss-cn-shanghai.aliyuncs.com/MTY1NTYyODQ2Ni41MTU1MTAyXzBfMA==.png','https://xinlikj.oss-cn-shanghai.aliyuncs.com/MTYzMzAwOTUxNjhfMF8w.png','https://xinlikj.oss-cn-shanghai.aliyuncs.com/MTYzMzA4NzA5ODEzXzBfMA==.png'];
-    const contentTotalLikers = 486;
+    function getContentTotalLike() {
+        if (content) return content["like_count"];
+        return undefined;
+    }
+
+    function getContentLikerAvatarList() {
+        if (content) return content["liker_logos"];
+        return undefined;
+    }
 
     function getAtsComponent() {
         let atsInfo = getContentAts();
@@ -126,6 +134,10 @@ export default function ContentView(props) {
                 publishTime={getContentPublishTime()}
                 positionValid={getContentPositionValid()}
                 positionDetail={getContentPositionDetail()}
+            />
+            <Liker
+                likerAvatarList={getContentLikerAvatarList()}
+                totalLikers={getContentTotalLike()}
             />
         </main>
     )
