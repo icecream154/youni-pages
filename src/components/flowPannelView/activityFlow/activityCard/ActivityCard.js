@@ -2,6 +2,7 @@ import React from "react";
 import orgCertIcon from "../../../../assets/schoolid@3x.png";
 import busCertIcon from "../../../../assets/companyid@3x.png";
 import activityLocationIcon from "../../../../assets/activityLocation@3x.png";
+import { jumpToActivityPage } from "../../../../utils/linkUtil";
 import './ActivityCard.css';
 
 function getActivityTimeString(oriStr) {
@@ -42,7 +43,7 @@ export default function ActivityCard(props) {
     let activityName = activity["activity_name"];
 
     return (
-        <div className="activityCard">
+        <div className="activityCard" onClick={() => jumpToActivityPage(activity["id"])}>
             <div className="activityCard--owner_info_container">
                 <img className="activityCard--owner_avatar" src={activity["owner_logo"]} alt="" />
                 <div className="activityCard--owner_desc_container">

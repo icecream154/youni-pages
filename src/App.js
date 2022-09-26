@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom';
 import PersonalPage from './PersonalPage';
+import ActivityPage from './ActivityPage';
 
 function App(props) {
 
@@ -16,6 +17,7 @@ function App(props) {
       <Routes>
         <Route path="/content/:identification" element={<ContentPage />} ></Route>
         <Route path="/person/:identification" element={<PersonalPage />} ></Route>
+        <Route path="/activity/:identification" element={<ActivityPage />} ></Route>
       </Routes>
     </Router>
   );

@@ -1,0 +1,11 @@
+.acitivtyAt--name {
+    color: rgba(17, 52, 100, 1);
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.activityAt {
+    margin-block-end: 0.6em;
+}

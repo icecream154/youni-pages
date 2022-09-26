@@ -109,12 +109,43 @@ export function encodePersonUrl(accId, accType, relatedId, env) {
     return window.btoa(accId + "#" + accType + "#" + relatedId + "@" + env);
 }
 
+/*
+    活动链接原始数据格式：活动id + “@” + 环境参数("dev"/"test"/"prod")
+*/
+export function decodeActivityUrl(identification) {
+    let data = window.atob(identification);
+    let atIndex = data.indexOf('@');
+    if (atIndex === -1 || atIndex === 0 || atIndex === identification.length - 1) {
+        return [false, 0, "unkown"];
+    }
+
+    let idStr = data.substring(0, atIndex);
+    let env = data.substring(atIndex + 1, identification.length);
+
+    if (env !== devEnv && env !== testEnv && env !== prodEnv) {
+        return [false, 0, "unkown"];
+    }
+
+    return [true, parseInt(idStr, 10), env];
+}
+
+export function encodeActivityUrl(activityId, env) {
+    if (env !== devEnv && env !== testEnv && env !== prodEnv) {
+        return [false, ""];
+    }
+    return window.btoa(activityId + "@" + env);
+}
+
 export function jumpToContentPage(contentId) {
     window.location.href = "/share/content/" + encodeContentUrl(contentId, getServerEnv());
 }
 
 export function jumpToPersonalPage(accId, accType, relatedId) {
     window.location.href = "/share/person/" + encodePersonUrl(accId, accType, relatedId, getServerEnv());
+}
+
+export function jumpToActivityPage(activityId) {
+    window.location.href = "/share/activity/" + encodeActivityUrl(activityId, getServerEnv());
 }
 
 console.log(encodePersonUrl(3,2,3,"prod"))
