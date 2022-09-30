@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import likeIcon from "../../../../assets/commentlike.png";
 import defaultPersonalAvatar from "../../../../assets/defaultPersonalAvatar@3x.png";
 import { jumpToContentPage } from "../../../../utils/linkUtil";
@@ -12,7 +12,7 @@ export default function ContentCard(props) {
     const pictures = content.pictures;
     const [imgClassName, setImgClassName] = useState(getClassName(content["display_ratio"]));
     if (pictures.length > 0) {
-        if (!content["display_ratio"] || content["display_ratio"] == 0) {
+        if (!content["display_ratio"] || content["display_ratio"] === 0) {
             reactImageSize(pictures[0])
                 .then(({ width, height }) => setImgClassName(getClassName(height / width)))
                 .catch((errorMessage) => console.log(errorMessage));

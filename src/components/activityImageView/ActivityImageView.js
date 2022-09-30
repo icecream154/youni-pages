@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from 'antd';
-import './activityImageView.css';
+import './ActivityImageView.css';
 
-export default function ImageView(props) {
+export default function ActivityImageView(props) {
 
     const onChange = (currentSlide) => {
       console.log(currentSlide);
@@ -12,6 +12,11 @@ export default function ImageView(props) {
     if (!pictures) {
       pictures = []
     }
+
+    function getActivityPictures() {
+      if (activity) return activity["photos"];
+      return [];
+  }
     
     const imgList = pictures.map((src, idx) => {
       return (

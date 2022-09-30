@@ -10,7 +10,7 @@ export default function PersonalInfoView(props) {
         "background": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + personalInfoBackground + "') center center no-repeat"
     };
 
-    if (props.backUrl != "") {
+    if (props.backUrl !== "") {
         backgroundStyle["background"] = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + props.backUrl + "') center center no-repeat"
     }
 

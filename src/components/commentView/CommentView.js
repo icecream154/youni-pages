@@ -1,14 +1,18 @@
 import React from "react";
-import commentData from "./commentData";
 import './CommentView.css';
 import Comment from "./comment/Comment";
 
 export default function CommentView(props) {
 
     let commentList = props.comment;
+    let maxCommentLength = props.maxCommentLength;
+    if (!maxCommentLength) {
+        maxCommentLength = 3;
+    }
     console.log(commentList);
+    
     // 最多仅显示三个一级评论
-    if (commentList.length > 3) {
+    if (commentList.length > maxCommentLength) {
         commentList = commentList.slice(0, 3);
     }
 

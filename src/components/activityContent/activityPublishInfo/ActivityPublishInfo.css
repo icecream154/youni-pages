@@ -1,0 +1,10 @@
+.activityPublishInfo {
+    margin-block-end: 1em;
+}
+
+.activityPublishInfo--publish_time {
+    color: rgba(102, 102, 102, 1);
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    margin-right: 14px;
+}

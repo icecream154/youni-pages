@@ -16,8 +16,8 @@ export default function EmptyFlow(props) {
             case "collect": return emptyCollectImg;
             case "closeCollect": return closeCollectImg;
             case "activity": return emptyActivityImg;
+            default: return emptyPublishImg;
         }
-        return emptyPublishImg;
     }
 
     function getEmptyHintText(emptyType) {
@@ -26,8 +26,8 @@ export default function EmptyFlow(props) {
             case "collect": return ["作者还没有收藏~"];
             case "closeCollect": return ["作者未公开收藏~"];
             case "activity": return ["暂无活动", "作者还在努力构思中～"];
+            default: return [];
         }
-        return emptyPublishImg;
     }
 
     return (

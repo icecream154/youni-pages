@@ -54,6 +54,7 @@
     color: rgba(153, 153, 153, 1);
     font-size: 14px;
     font-family: PingFangSC-Regular;
+    display: inline-block;
 }
 
 .comment--text_and_like_container {

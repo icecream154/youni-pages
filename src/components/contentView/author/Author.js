@@ -1,5 +1,5 @@
 import React from "react";
-import certIcon from "../../../assets/schoolid@3x.png";
+import certIcon from "../../../assets/personid@3x.png";
 import defaultPersonalAvatar from "../../../assets/defaultPersonalAvatar@3x.png";
 import { jumpToPersonalPage } from "../../../utils/linkUtil";
 import './Author.css';

@@ -1,12 +1,26 @@
 import React from "react";
 import './ActivityContent.css';
+import ActivityPublishInfo from "./activityPublishInfo/ActivityPublishInfo";
 
 export default function ActivityContent(props) {
 
-    const paragraphList = props.paragraphs;
+    let activity = props.activity;
+    if (!activity) {
+        return <div></div>
+    }
+
+    const paragraphList = getActivityParagraphs();
     const paragraphs = paragraphList.map((paragraphActivityContent, idx) => {
         return <p key={idx} className="activityContent--paragraph">{paragraphActivityContent}</p>
     });
+
+    function getActivityParagraphs() {
+        if (activity) {
+            let rawActivityText = activity["description"];
+            return rawActivityText.split("\n");
+        }
+        return [];
+    }
 
     function getActivityContentParagraphContainer() {
         // 空内容时不渲染内容模块
@@ -22,10 +36,8 @@ export default function ActivityContent(props) {
 
     return (
         <div className="activityContent">
-            <div className="activityContent--title_container">
-                <p className="activityContent--title">{props.title}</p>
-            </div>
             {getActivityContentParagraphContainer()}
+            <ActivityPublishInfo createdAt={activity["created_at"]} />
         </div>
     )
 }

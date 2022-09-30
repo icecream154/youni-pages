@@ -1,0 +1,68 @@
+.activityAuthor {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-top: 0.45em;
+    margin-bottom: 0.6em;
+}
+
+.activityAuthor--avatar {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 4px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.activityAuthor--desc {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.activityAuthor--name_container {
+    margin-top: 3px;
+    margin-bottom: -3px;
+}
+
+.activityAuthor--name {
+    font-size: 17px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.activityAuthor-cert_icon {
+    width: 15px;
+    height: 15px;
+    margin: -3px 0 0 5px;
+}
+
+.activityAuthor--college {
+    height: 17px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    color: rgba(153, 153, 153, 1);
+    font-size: 13.5px;
+    letter-spacing: -0.6000000238418579px;
+    font-family: PingFangSC-Regular;
+    white-space: nowrap;
+    line-height: 17px;
+    text-align: left;
+    margin-top: 1px;
+}
+
+.activityAuthor--focus_button {
+    background: linear-gradient(to right, #fe2641, #ffc217);
+    color: white;
+    border-radius: 2rem;
+    padding: 2.5px 10px;
+    font-size: 14.5px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    width: 75px;
+}

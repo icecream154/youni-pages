@@ -148,5 +148,6 @@ export function jumpToActivityPage(activityId) {
     window.location.href = "/share/activity/" + encodeActivityUrl(activityId, getServerEnv());
 }
 
-console.log(encodePersonUrl(3,2,3,"prod"))
-console.log(encodeContentUrl(18,"prod"))
+console.log(encodePersonUrl(3,2,3,"prod"));
+console.log(encodeContentUrl(18,"prod"));
+console.log(encodeActivityUrl(1,"prod"))
