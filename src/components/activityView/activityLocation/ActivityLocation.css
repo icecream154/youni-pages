@@ -1,0 +1,36 @@
+.activityLocation {
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+}
+
+.activityLocation--icon_container {
+    height: 36px;
+    margin-right: 9px;
+    margin-left: 1.5px;
+    padding-top: 2px;
+}
+
+.activityLocation--location_icon {
+    height: 16px;
+}
+
+.activityLocation--location_text_container {
+    margin-right: auto;
+    padding-top: 3px;
+}
+
+.activityLocation--location_text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.activityLocation--location_navigate_container {
+    height: 36px;
+    padding-top: 2px;
+    margin-right: 10px;
+}
+
+.activityLocation--location_navigate {
+    height: 18px;
+}
