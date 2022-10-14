@@ -15,8 +15,7 @@ export function openApp(pageType, pageInfo) {
             if (isAndroid()) {
                 hrefStr = "contentscheme://com.xinli.younishare/contentDetail?id=" + contentId
             } else if (isIOS()) {
-                alert('ios正在实现');
-                return
+                hrefStr = "https://static.theyouni.com/appForward/content/" + window.btoa("" + contentId)
             }
             break;
         case "person":
@@ -30,8 +29,8 @@ export function openApp(pageType, pageInfo) {
                 hrefStr = "infoscheme://com.xinli.younishare/othersInfo?" +
                 "id=" + accId + "&account_type=" +accType + "&related_id=" + relatedId
             } else if (isIOS()) {
-                alert('ios正在实现');
-                return
+                hrefStr = "https://static.theyouni.com/appForward/person/" +
+                 window.btoa("" + accId + "#" + accType + "#" + relatedId)
             }
             break;
         case "activity":
@@ -42,8 +41,7 @@ export function openApp(pageType, pageInfo) {
             if (isAndroid()) {
                 hrefStr = "activityscheme://com.xinli.younishare/acDetail?id=" + activityId
             } else if (isIOS()) {
-                alert('ios正在实现');
-                return
+                hrefStr = "https://static.theyouni.com/appForward/activity/" + window.btoa("" + activityId)
             }
             break;
         default:
